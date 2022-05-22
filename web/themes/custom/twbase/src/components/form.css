@@ -1,0 +1,105 @@
+/**
+ * @file
+ * Override classy styles for form components.
+ */
+
+form input[type='submit'] {
+  @apply tw-px-4 tw-py-2 tw-text-slate-800;
+}
+
+form input[type='text'],
+form input[type='password'],
+form input[type='email'],
+form input[type='number'],
+form input[type='url'],
+form input[type='date'],
+form input[type='datetime-local'],
+form input[type='month'],
+form input[type='week'],
+form input[type='time'],
+form input[type='search'],
+form input[type='tel'],
+select,
+select[multiple],
+textarea {
+  @apply tw-border-slate-300 dark:tw-bg-slate-800 tw-text-slate-800 dark:tw-text-slate-200 tw-rounded-md tw-shadow-sm;
+  @apply focus:tw-border-primary-light focus:tw-ring focus:tw-ring-primary-lightest focus:tw-ring-opacity-50;
+}
+form input[type='text'],
+form input[type='password'],
+form input[type='email'],
+form input[type='url'],
+form input[type='search'],
+form input[type='tel'],
+textarea {
+  @apply tw-w-full tw-max-w-full;
+}
+
+form input[type='checkbox'] {
+  @apply tw-rounded;
+}
+form input[type='checkbox'],
+form input[type='radio'] {
+  @apply tw-border-slate-300 tw-text-primary tw-shadow-sm;
+  @apply focus:tw-border-primary-light focus:tw-ring focus:tw-ring-offset-0 focus:tw-ring-primary-lightest focus:tw-ring-opacity-50 dark:focus:tw-ring-opacity-80;
+}
+
+form .dropbutton-multiple,
+form .dropbutton-multiple.open,
+form .dropbutton-multiple.open .dropbutton-widget {
+  @apply tw-w-full tw-max-w-lg;
+}
+.js form .dropbutton-widget {
+  @apply tw-border-slate-300 hover:tw-border-slate-300 tw-rounded-md tw-overflow-hidden;
+}
+form .dropbutton-widget .dropbutton {
+  @apply tw-border-r tw-border-slate-200;
+}
+form .dropbutton-widget .dropbutton li {
+  @apply dark:tw-bg-slate-800 tw-text-slate-800 dark:tw-text-slate-200;
+}
+form .dropbutton-widget .dropbutton li a {
+  @apply tw-no-underline tw-font-normal;
+}
+form .dropbutton-widget .dropbutton li.dropbutton-action {
+  @apply tw-m-0 tw-p-0;
+}
+form .dropbutton-widget .dropbutton > li::before {
+  @apply tw-w-0 tw-h-0 tw-top-0 tw-left-0 tw-border-slate-400;
+}
+form .dropbutton-widget .dropbutton .dropbutton-toggle {
+  @apply tw-absolute tw-m-0;
+}
+form .dropbutton-widget .dropbutton .dropbutton-arrow {
+  @apply tw-right-1/3;
+}
+
+form .dropbutton-widget .dropbutton .dropbutton-arrow {
+  @apply tw-border-t-slate-400 dark:tw-border-t-slate-400;
+}
+form .dropbutton-multiple.open .dropbutton .dropbutton-arrow {
+  @apply tw-border-opacity-0;
+}
+
+form fieldset.form-wrapper {
+  @apply tw-p-4;
+}
+form fieldset.form-wrapper legend {
+  @apply tw-px-2 tw-font-medium;
+}
+form fieldset.fieldgroup legend {
+  @apply tw-p-0;
+}
+form fieldset.fieldgroup,
+form fieldset.form-composite {
+  @apply tw-p-0;
+}
+
+.form-type-radio .description,
+.form-type-checkbox .description {
+  @apply tw-ml-5; /* LTR */
+}
+[dir="rtl"] .form-type-radio .description,
+[dir="rtl"] .form-type-checkbox .description {
+  @apply tw-mr-5;
+}

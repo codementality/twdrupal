@@ -1,0 +1,22 @@
+uuid: 623c9920-0854-4f1e-9b19-31ea2cbdf9f7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - twbase
+_core:
+  default_config_hash: T0wbI6qVdThbbIqXDZFg_1VZ3_ittXBdEoUH7d7ux_E
+id: twbase_local_tasks
+theme: twbase
+region: content
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

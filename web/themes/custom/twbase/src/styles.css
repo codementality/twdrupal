@@ -1,0 +1,118 @@
+/**
+ * @file
+ * src/styles.css
+ *
+ * TWBase theme - Include Tailwind in our CSS.
+ */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/*
+Drupal core Classy theme overrides
+==================================
+*/
+
+/* @import "components/hero"; */
+@import "contextual/contextual";
+@import "components/base-text";
+@import "components/button";
+@import "components/field";
+@import "components/form";
+@import "components/menu";
+@import "components/messages";
+@import "components/misc";
+@import "components/navbar";
+@import "components/node";
+/* @import "components/sidebar"; */
+/* @import "components/toolbar"; */
+/* @import "components/showcase"; */
+/* @import "../custom/blogs"; */
+
+@layer base {
+  /*
+    Avoid "blip" where you might see your uninitialized template after the page loads, but before Alpine loads
+    https://github.com/alpinejs/alpine/issues/361
+    https://alpinejs.dev/directives/cloak
+  */
+  [x-cloak] { display: none !important; }
+
+  body.toolbar-fixed .navbar-fixed {
+    top: 36px;
+  }
+  body.toolbar-fixed.has-showcase .navbar-fixed {
+    top: 36px;
+  }
+  /* Horizontal */
+  body.toolbar-tray-open.toolbar-horizontal.toolbar-fixed .navbar-fixed {
+    top: 73px;
+  }
+  body.toolbar-tray-open.toolbar-horizontal.toolbar-fixed.has-showcase .navbar-fixed {
+    top: 73px;
+  }
+  body.navbar-is-fixed .toolbar-oriented .toolbar-bar {
+    @apply tw-fixed;
+  }
+
+  #toolbar-administration {
+    @apply tw-text-xs;
+  }
+
+  .region-sidebar .block:first-child h2,
+  .region-sidebar-first .block:first-child h2,
+  .region-sidebar-second .block:first-child h2 {
+    @apply tw-mt-0;
+  }
+
+  .region-wide-content,
+  .region-wide-content a,
+  .region-wide-content .block > h2,
+  .region-wide-content .block .block-title {
+    @apply tw-text-slate-800 dark:tw-text-slate-800;
+  }
+  .region-wide-content .block > h2,
+  .region-wide-content .block .block-title {
+    @apply tw-mt-0;
+  }
+
+  .region-pre-footer,
+  /* .region-pre-footer a, */
+  .region-pre-footer .block > h2,
+  .region-pre-footer .block .block-title {
+    @apply tw-text-slate-500 dark:tw-text-slate-500;
+  }
+  /* .region-pre-footer a:hover {
+    @apply tw-text-slate-300 dark:tw-text-slate-300;
+  } */
+
+  .region-footer,
+  .region-footer a,
+  .region-footer .block > h2,
+  .region-footer .block .block-title {
+    @apply tw-text-slate-500 dark:tw-text-slate-500;
+  }
+
+  .tabs .primary {
+    @apply tw-list-none tw-text-sm tw-flex tw-cursor-pointer tw-border-b-2 tw-border-slate-600;
+  }
+  .tabs .primary li {
+    @apply tw-p-0 tw-mr-1 tw-rounded-t-lg tw-bg-slate-200;
+  }
+  .tabs .primary li a {
+    @apply tw-block tw-py-1 tw-px-4 tw-bg-transparent tw-text-slate-600;
+  }
+  .tabs .primary li:hover {
+    @apply tw-bg-slate-400;
+  }
+  .tabs .primary li:hover a {
+    @apply tw-text-white tw-border-b-2 tw-border-slate-600 tw-no-underline tw--mb-0.5;
+  }
+  .tabs .primary li.is-active {
+    @apply tw-bg-slate-600;
+  }
+  .tabs .primary li.is-active a {
+    @apply tw-text-white tw-border-b-2 tw-border-slate-600 tw--mb-0.5;
+  }
+
+}

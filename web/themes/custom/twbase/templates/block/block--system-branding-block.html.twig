@@ -1,0 +1,36 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_logo_dark: A variant of the logo to allow switching on scroll and between light/dark mode.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{% block content %}
+<div class="tw-flex tw-flex-row tw-items-center currentColor">
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo tw-pr-2 tw-tracking-widest currentColor focus:tw-outline-none focus:tw-shadow-outline">
+      <img id="light-logo" src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+      <img id="dark-logo" src="{{ site_logo_dark }}" alt="{{ 'Home'|t }}" class="tw-hidden" />
+    </a>
+  {% endif %}
+  {% if site_name or site_slogan %}
+    <div class="currentColor">
+      {% if site_name %}
+        <a class="site-name tw-text-lg tw-font-semibold tw-uppercase" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+      {% endif %}
+      {% if site_slogan %}
+        <span id="site-slogan" class="site-slogan tw-block tw-text-slate-200 tw-italic">{{ site_slogan }}</span>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

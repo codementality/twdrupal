@@ -1,0 +1,9 @@
+/**
+ * @file
+ * Override classy styles for nodes.
+ */
+
+/* Drupal Contextual links */
+.contextual-region .contextual.open ul.contextual-links > li::before {
+  @apply tw-content-none tw-w-0 tw-h-0;
+}

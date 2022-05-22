@@ -1,0 +1,20 @@
+uuid: f0deda2d-cd2c-4eba-9b7e-79dbce7e579f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - twbase
+_core:
+  default_config_hash: Oh72CHUkp6cj6dbrXMK2hzCsM05w9cHVoD22rMLQUfk
+id: twbase_page_title
+theme: twbase
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }
