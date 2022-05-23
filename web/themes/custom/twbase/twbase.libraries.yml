@@ -3,14 +3,14 @@ global-styling:
   header: true
   css:
     theme:
-      css/styles.css: {}
+      dist/css/styles.css: {}
 
 custom-styling:
   version: 1.x
   header: true
   css:
     theme:
-      css/twbase-gradient.css: {}
+      dist/css/twbase-gradient.css: {}
 
 global-scripts:
   version: 1.x

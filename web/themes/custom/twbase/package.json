@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "TWBase - A starter theme for Drupal built with Tailwind CSS",
     "scripts": {
-        "build": "postcss src/*.css -d css/ --verbose && ls -S -lh css/styles.css | awk '{print \"\\x1B[33mSize: \" $5}'",
+        "build": "postcss src/*.css -d dist/css/ --verbose && ls -S -lh dist/css/styles.css | awk '{print \"\\x1B[33mSize: \" $5}'",
         "watch": "chokidar '*.config.js' 'src/*.css' 'src/**/*.css' '**/*.twig' -i 'node_modules' -c 'npm run build' --initial"
     },
     "license": "ISC",
